@@ -1,0 +1,126 @@
+// File name: generated.proto
+// Scanned classes:
+//   org.jboss.openshift.quickstart.datavirt.remotecache.domain.Account
+//   org.jboss.openshift.quickstart.datavirt.remotecache.domain.Holding
+//   org.jboss.openshift.quickstart.datavirt.remotecache.domain.Customer
+//   org.jboss.openshift.quickstart.datavirt.remotecache.domain.Product
+
+package quickstart;
+
+
+/*
+@Indexed
+*/
+message ACCOUNT {
+   /*
+   @IndexedField
+   */
+   required int32 ID = 1;
+   /*
+   @IndexedField
+   */
+   required string SSN = 2;
+   /*
+   @IndexedField(index=false, store=false)
+   */
+   required string STATUS = 3;
+   /*
+   @IndexedField(index=false, store=false)
+   */
+   required string TYPE = 4;
+   /*
+   @IndexedField(index=false, store=false)
+   */
+   required int64 DATEOPENED = 5;
+   /*
+   @IndexedField(index=false, store=false)
+   */
+   optional int64 DATECLOSED = 6;
+}
+
+/*
+@Indexed
+*/
+message HOLDINGS {
+   /*
+   @IndexedField
+   */
+   required int32 TRANSACTION_ID = 1;
+   /*
+   @IndexedField
+   */
+   required int32 ACCOUNT_ID = 2;
+   /*
+   @IndexedField
+   */
+   required int32 PRODUCT_ID = 3;
+   /*
+   @IndexedField(index=false, store=false)
+   */
+   required int64 PURCHASE_DATE = 4;
+   /*
+   @IndexedField(index=false, store=false)
+   */
+   required int32 SHARES_COUNT = 5;
+}
+
+/*
+@Indexed
+*/
+message CUSTOMER {
+   /*
+   @IndexedField
+   */
+   required string SSN = 1;
+   /*
+   @IndexedField(index=false, store=false)
+   */
+   required string FIRSTNAME = 2;
+   /*
+   @IndexedField(index=false, store=false)
+   */
+   required string LASTNAME = 3;
+   /*
+   @IndexedField(index=false, store=false)
+   */
+   required string ST_ADDRESS = 4;
+   /*
+   @IndexedField(index=false, store=false)
+   */
+   required string APT_NUMBER = 5;
+   /*
+   @IndexedField(index=false, store=false)
+   */
+   required string CITY = 6;
+   /*
+   @IndexedField(index=false, store=false)
+   */
+   required string STATE = 7;
+   /*
+   @IndexedField(index=false, store=false)
+   */
+   required string ZIPCODE = 8;
+   /*
+   @IndexedField(index=false, store=false)
+   */
+   required string PHONE = 9;
+}
+
+/*
+@Indexed
+*/
+message PRODUCT {
+   /*
+   @IndexedField
+   */
+   required int32 ID = 1;
+   /*
+   @IndexedField
+   */
+   required string SYMBOL = 2;
+   /*
+   @IndexedField(index=false, store=false)
+   */
+   required string COMPANY_NAME = 3;
+}
+
